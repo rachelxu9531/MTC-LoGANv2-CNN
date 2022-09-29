@@ -10,10 +10,14 @@ The github repository for LoGANv2 is listed as https://github.com/cedricoeldorf/
 
 ### Set-up
 
-To run the code, an NVIDIA QUADRO P5000 video card with 8GB video memory is required
+To run the code, an NVIDIA QUADRO P5000 video card with 8GB video memory is required.
+
 Software development environment should be any Python integrated development environment used on an NVIDIA video card.
+
 Programming language: Python 3.6.
+
 Tensorflow-gpu == 1.15.1
+
 Tensorflow == 1.19
 
 
