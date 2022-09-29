@@ -34,6 +34,11 @@ python dataset_tool.py create_from_images dataset/logos ../data/my_images
 
 ### Training
 
+There are serval steps involved in the training of LoGANv2
+
+#### Step 1: Locate path to TF records (e.g. dataset)
+
+
 ### Evaluating the Network
 
 ## CNN
