@@ -114,6 +114,11 @@ python train.py
 ```
 
 ### Evaluating the Network
+In order to evaluate the network, select evaluation tasks in line 80 of run_metrics.py and insert relevant network pickle path:
+
+```
+tasks += [EasyDict(run_func_name='run_metrics.run_pickle', network_pkl='./results/pickle.pkl', dataset_args=EasyDict(tfrecord_dir='logos', shuffle_mb=0), mirror_augment=True)]
+```
 
 ## CNN
 
