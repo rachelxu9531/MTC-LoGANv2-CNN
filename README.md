@@ -105,8 +105,13 @@ fused_scale         = 'auto',       # True = fused convolution + scaling, False 
 blur_filter         = [1,2,1],      # Low-pass filter to apply when resampling activations. None = no filtering.
 ```
 
+#### Step 4: Initialize training
 
+Initialize training of architecture by running:
 
+```
+python train.py
+```
 
 ### Evaluating the Network
 
