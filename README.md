@@ -20,8 +20,21 @@ Tensorflow-gpu == 1.15.1
 
 Tensorflow == 1.19
 ```
-
 ### Data Preparation
+To run LoGANv2, each image in the dataset must have the exact same format in terms of size, extension, colour space and bit depth. To eliminate any irregular images and convert dataset into Tensorflow record files, run dataset_tool.py as
+
+```
+# Pickle path = '../data/mypickle.pickle'
+mypickle = {"Filenames": list_of_file_paths, "Labels": class_condition_labels}
+
+```
+The script is run from the terminal and takes the paths to your images and the path of your TF-record directory as flags
+
+```
+python dataset_tool.py create_from_images dataset/logos ../data/my_images
+
+```
+
 ### Training
 
 ### Evaluating the Network
