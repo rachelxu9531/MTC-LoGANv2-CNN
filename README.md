@@ -19,7 +19,6 @@ Programming language: Python 3.6.
 Tensorflow-gpu == 1.15.1
 
 Tensorflow == 1.19
-
 ```
 
 ### Data Preparation
