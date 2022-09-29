@@ -52,9 +52,19 @@ self.tfrecord_dir = 'dataset/logos'
 ```
 label_size = 10
 ```
+#### Step 3: Set hyper-parameters for networks and other indications for the training loop
 
+- Starting at line 112 in training_loop.py
 
-
+```
+G_smoothing_kimg        = 10.0,     # Half-life of the running average of generator weights.
+D_repeats               = 2,        # How many times the discriminator is trained per G iteration.
+minibatch_repeats       = 1,        # Number of minibatches to run before adjusting training parameters.
+reset_opt_for_new_lod   = True,     # Reset optimizer internal state (e.g. Adam moments) when new layers are introduced?
+total_kimg              = 20000,    # Total length of the training, measured in thousands of real images.
+mirror_augment          = True,     # Enable mirror augment?
+drange_net              = [-1,1],   # Dynamic range used when feeding image data to the networks.
+```
 
 ### Evaluating the Network
 
