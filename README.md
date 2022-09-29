@@ -20,7 +20,7 @@ Software development environment should be any Python integrated development env
 
 Programming language: Python 3.6.
 
-
+<!-- This content will not appear in the rendered Markdown -->
 
 
 ### Data Preparation
