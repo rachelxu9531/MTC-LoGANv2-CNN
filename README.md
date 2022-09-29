@@ -74,6 +74,38 @@ mapping_nonlinearity    = 'lrelu',      # Activation function: 'relu', 'lrelu'.
 use_wscale              = True,         # Enable equalized learning rate?
 normalize_latents       = True,         # Normalize latent vectors (Z) before feeding them to the mapping layers?
 ```
+- Starting at line 384 in networks_stylegan.py:
+```
+resolution          = 128,          # Output resolution.
+fmap_base           = 8192,         # Overall multiplier for the number of feature maps.
+fmap_decay          = 1.0,          # log2 feature map reduction when doubling the resolution.
+fmap_max            = 128,          # Maximum number of feature maps in any layer.
+use_styles          = True,         # Enable style inputs?
+const_input_layer   = True,         # First layer is a learned constant?
+use_noise           = True,         # Enable noise inputs?
+randomize_noise     = True,         # True = randomize noise inputs every time (non-deterministic), False = read noise inputs from variables.
+nonlinearity        = 'lrelu',      # Activation function: 'relu', 'lrelu'
+use_wscale          = True,         # Enable equalized learning rate?
+use_pixel_norm      = False,        # Enable pixelwise feature vector normalization?
+use_instance_norm   = True,         # Enable instance normalization?
+dtype               = 'float32',    # Data type to use for activations and outputs.
+fused_scale         = 'auto',       # True = fused convolution + scaling, False = separate ops, 'auto' = decide automatically.
+blur_filter         = [1,2,1],      # Low-pass filter to apply when resampling activations. None = no filtering.
+```
+- Starting at line 384 in networks_stylegan.py:
+```
+fmap_base           = 8192,         # Overall multiplier for the number of feature maps.
+fmap_decay          = 1.0,          # log2 feature map reduction when doubling the resolution.
+fmap_max            = 128,          # Maximum number of feature maps in any layer.
+nonlinearity        = 'lrelu',      # Activation function: 'relu', 'lrelu',
+use_wscale          = True,         # Enable equalized learning rate?
+mbstd_group_size    = 4,            # Group size for the minibatch standard deviation layer, 0 = disable.
+mbstd_num_features  = 1,            # Number of features for the minibatch standard deviation layer.
+fused_scale         = 'auto',       # True = fused convolution + scaling, False = separate ops, 'auto' = decide automatically.
+blur_filter         = [1,2,1],      # Low-pass filter to apply when resampling activations. None = no filtering.
+```
+
+
 
 
 ### Evaluating the Network
