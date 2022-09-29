@@ -55,7 +55,6 @@ label_size = 10
 #### Step 3: Set hyper-parameters for networks and other indications for the training loop
 
 - Starting at line 112 in training_loop.py
-
 ```
 G_smoothing_kimg        = 10.0,     # Half-life of the running average of generator weights.
 D_repeats               = 2,        # How many times the discriminator is trained per G iteration.
@@ -65,6 +64,17 @@ total_kimg              = 20000,    # Total length of the training, measured in 
 mirror_augment          = True,     # Enable mirror augment?
 drange_net              = [-1,1],   # Dynamic range used when feeding image data to the networks.
 ```
+- Starting at line 384 in networks_stylegan.py:
+```
+dlatent_size            = 128,          # Disentangled latent (W) dimensionality.
+mapping_layers          = 8,            # Number of mapping layers.
+mapping_fmaps           = 128,          # Number of activations in the mapping layers.
+mapping_lrmul           = 0.01,         # Learning rate multiplier for the mapping layers.
+mapping_nonlinearity    = 'lrelu',      # Activation function: 'relu', 'lrelu'.
+use_wscale              = True,         # Enable equalized learning rate?
+normalize_latents       = True,         # Normalize latent vectors (Z) before feeding them to the mapping layers?
+```
+
 
 ### Evaluating the Network
 
