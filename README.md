@@ -36,16 +36,24 @@ python dataset_tool.py create_from_images dataset/logos ../data/my_images
 
 There are serval steps involved in the training of LoGANv2
 
+#### Step 1: Locate path to TF records (e.g. dataset)
+
 - In train.py line 37:
 ```
 desc += '-logos'; dataset = EasyDict(tfrecord_dir='logos', resolution=128);
 ```
-- In ./training/dataset.py line 49:
+- In dataset.py line 49:
 ```
 self.tfrecord_dir = 'dataset/logos'
 ```
+##### Step 2: Set number of class-conditions
 
-#### Step 1: Locate path to TF records (e.g. dataset)
+- In networks_stylegan.py line 388 & line 569, change 
+```
+label_size = 10
+```
+
+
 
 
 ### Evaluating the Network
