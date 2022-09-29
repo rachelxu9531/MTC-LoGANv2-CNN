@@ -9,7 +9,7 @@ Implementation of LoGANv2 is based on the open-source code published by [Oeldorf
 The github repository for LoGANv2 is listed as https://github.com/cedricoeldorf/ConditionalStyleGAN. 
 
 ### Set-up
-
+```
 To run the code, an NVIDIA QUADRO P5000 video card with 8GB video memory is required.
 
 Software development environment should be any Python integrated development environment used on an NVIDIA video card.
@@ -20,7 +20,7 @@ Tensorflow-gpu == 1.15.1
 
 Tensorflow == 1.19
 
-
+```
 
 ### Data Preparation
 ### Training
