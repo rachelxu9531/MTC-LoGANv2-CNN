@@ -14,11 +14,20 @@ To run the code, an NVIDIA QUADRO P5000 video card with 8GB video memory is requ
 
 Software development environment should be any Python integrated development environment used on an NVIDIA video card.
 
-Programming language: Python 3.6.
+Programming language: Python 3.6.13
 
 Tensorflow-gpu == 1.15.1
 
 Tensorflow == 1.19
+
+numpy == 1.19.2
+
+scipy == 1.5.2
+
+torch == 1.10
+
+seaborn == 0.11.2
+
 ```
 ### Data Preparation
 To run LoGANv2, each image in the dataset must have the exact same format in terms of size, extension, colour space and bit depth. To eliminate any irregular images and convert dataset into Tensorflow record files, run dataset_tool.py as
