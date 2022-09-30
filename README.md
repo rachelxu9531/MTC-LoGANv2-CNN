@@ -158,4 +158,14 @@ The training data for CNN contains both real seismic facies for mass transport c
 ### Training
 There are serval steps involved in the training of LoGANv2
 
+#### Step 1: Locate path to combined training set
+
+- In train.py line 43:
+```
+path_train = \Training\Trial_number
+```
+- In dataset.py line 49:
+```
+self.tfrecord_dir = 'dataset/logos'
+
 ### Evaluating the Network
