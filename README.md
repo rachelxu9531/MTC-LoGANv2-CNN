@@ -160,14 +160,15 @@ There are serval steps involved in the training of LoGANv2
 
 #### Step 1: Locate path to combined training set
 
-- In train.py line 43:
+- In train.py line 41:
 ```
-path_train = \Training\Trial_number
+path_train = '\Training\Trial_number'
+path_train = '\Testing\Trial_number'
 ```
 
 ##### Step 2: Set number of class-conditions
 
-- In train.py line 364, change 
+- In train.py line 365, change 
 ```
 CATEGORIES = ['Blocks', 'Extensional ridges', 'Grooves and striations', 'Individual flow', 'MTC material',
                   'Polygonally faults',
@@ -177,7 +178,7 @@ nb_classes = 9
 ```
 #### Step 3: Set hyper-parameters for networks and other indications for the training loop
 
-- Starting at line 413 in training.py
+- Starting at line 414 in training.py
 ```
 batch_size = 16
 nb_epochs = 20
@@ -195,3 +196,8 @@ Initialize training of architecture by running:
 python train.py
 ```
 ### Evaluating the Network
+In order to evaluate the network, select the corresponding csv files that are saved during training and testing and run the following code
+
+```
+python history.py
+```
