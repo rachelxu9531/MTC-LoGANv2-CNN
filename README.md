@@ -27,7 +27,6 @@ scipy == 1.5.2
 torch == 1.10
 
 seaborn == 0.11.2
-
 ```
 ### Data Preparation
 To run LoGANv2, each image in the dataset must have the exact same format in terms of size, extension, colour space and bit depth. To eliminate any irregular images and convert dataset into Tensorflow record files, run dataset_tool.py as
@@ -130,6 +129,31 @@ tasks += [EasyDict(run_func_name='run_metrics.run_pickle', network_pkl='./result
 ```
 
 ## CNN
+The CNN devleoped in this work is based on the architecture proposed by [Krizhevsky et al, 2012] (https://proceedings.neurips.cc/paper/2012/file/c399862d3b9d6b76c8436e924a68c45b-Paper.pdf)
+implementation of AlexNet (ImageNet Classification with Deep Convolutional Neural Networks) by Tensorflow and the network tested with the CIFAR-10 dataset.
+
+
+
+### Set-up
+```
+To run the code, an NVIDIA QUADRO P5000 video card with 8GB video memory is required.
+
+Software development environment should be any Python integrated development environment used on an NVIDIA video card.
+
+Programming language: Python 3.6.13
+
+Tensorflow-gpu == 1.15.1
+
+Tensorflow == 1.19
+
+numpy == 1.19.2
+
+scipy == 1.5.2
+
+torch == 1.10
+
+seaborn == 0.11.2
+```
 
 ### Data Preparation
 ### Training
