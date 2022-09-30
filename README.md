@@ -58,7 +58,7 @@ self.tfrecord_dir = 'dataset/logos'
 
 - In networks_stylegan.py line 388 & line 569, change 
 ```
-label_size = 10
+label_size = 9
 ```
 #### Step 3: Set hyper-parameters for networks and other indications for the training loop
 
@@ -164,8 +164,34 @@ There are serval steps involved in the training of LoGANv2
 ```
 path_train = \Training\Trial_number
 ```
-- In dataset.py line 49:
-```
-self.tfrecord_dir = 'dataset/logos'
 
+##### Step 2: Set number of class-conditions
+
+- In train.py line 364, change 
+```
+ CATEGORIES = ['Blocks', 'Extensional ridges', 'Grooves and striations', 'Individual flow', 'MTC material',
+                  'Polygonally faults',
+                  'Scarps', 'Slump folds', 'Undisturbed']
+    IMG_SIZE = 128
+    nb_classes = 9 
+```
+#### Step 3: Set hyper-parameters for networks and other indications for the training loop
+
+- Starting at line 413 in training.py
+```
+    batch_size = 16
+    nb_epochs = 20
+    img_rows, img_columns = 128, 128
+    img_channel = 3
+    nb_filters = 32
+    nb_pool = 2
+    nb_conv = 3
+```
+#### Step 4: Initialize training
+
+Initialize training of architecture by running:
+
+```
+python train.py
+```
 ### Evaluating the Network
