@@ -169,23 +169,23 @@ path_train = \Training\Trial_number
 
 - In train.py line 364, change 
 ```
- CATEGORIES = ['Blocks', 'Extensional ridges', 'Grooves and striations', 'Individual flow', 'MTC material',
+CATEGORIES = ['Blocks', 'Extensional ridges', 'Grooves and striations', 'Individual flow', 'MTC material',
                   'Polygonally faults',
                   'Scarps', 'Slump folds', 'Undisturbed']
-    IMG_SIZE = 128
-    nb_classes = 9 
+IMG_SIZE = 128
+nb_classes = 9 
 ```
 #### Step 3: Set hyper-parameters for networks and other indications for the training loop
 
 - Starting at line 413 in training.py
 ```
-    batch_size = 16
-    nb_epochs = 20
-    img_rows, img_columns = 128, 128
-    img_channel = 3
-    nb_filters = 32
-    nb_pool = 2
-    nb_conv = 3
+batch_size = 16
+nb_epochs = 20
+img_rows, img_columns = 128, 128
+img_channel = 3
+nb_filters = 32
+nb_pool = 2
+nb_conv = 3
 ```
 #### Step 4: Initialize training
 
