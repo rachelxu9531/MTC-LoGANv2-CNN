@@ -129,7 +129,11 @@ tasks += [EasyDict(run_func_name='run_metrics.run_pickle', network_pkl='./result
 ```
 
 ## CNN
-The CNN devleoped in this work is based on the architecture proposed by [Krizhevsky et al, 2012] (https://proceedings.neurips.cc/paper/2012/file/c399862d3b9d6b76c8436e924a68c45b-Paper.pdf)
+The CNN devleoped in this work is based on the AlexNet proposed by [Krizhevsky et al, 2012] (https://papers.nips.cc/paper/2012/hash/c399862d3b9d6b76c8436e924a68c45b-Abstract.html)
+
+
+
+
 implementation of AlexNet (ImageNet Classification with Deep Convolutional Neural Networks) by Tensorflow and the network tested with the CIFAR-10 dataset.
 
 
