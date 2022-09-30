@@ -201,3 +201,10 @@ In order to evaluate the network, select the corresponding csv files that are sa
 ```
 python history.py
 ```
+## Other tools
+
+Trial 3 and trial 4 conducted in this project invloved image rotation to streamline the process of LoGANv2 training using the following code
+
+```
+python image_rotation.py
+```
